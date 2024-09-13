@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 500px;
+    margin: 0 auto;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+.checkbox-container input {
+    margin-left: 0 auto;
+}
+label, input {
+    margin-bottom: 7px;
+}
+button{
+background-color: #463f3f;
+color: white;
+padding: 7px 10px;
+font-size: 14px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень под кнопкой */
+        transition: all 0.3s ease;                /* Плавный переход эффектов */
+}

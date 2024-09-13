@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Парсинг Excel в БД</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Парсинг данных из Excel в БД</h1>
+<form method="POST" enctype="multipart/form-data" action="parser.php">
+
+    <label for="excel_file">Загрузить Excel файл:</label>
+    <input type="file" id="excel_file" name="excel_file" accept=".xlsx, .xls" required>
+    <br>
+    <div class="checkbox-container">
+        <label for="option_header">Первая строка содержит заголовок:</label>
+        <input type="checkbox" id="option_header" name="contain_header">
+    </div>
+    
+    <label for="column_article">Колонка артикула:</label>
+    <input type="number" id="column_article" name="column_article" value="0">
+
+    <label for="column_price">Колонка цены:</label>
+    <input type="number" id="column_price" name="column_price" value="1">
+
+    <label for="column_name">Колонка наименования:</label>
+    <input type="number" id="column_name" name="column_name" value="2">
+
+    <label for="column_quantity">Колонка колличества:</label>
+    <input type="number" id="column_quantity" name="column_quantity" value="3">
+
+    <label for="price_min">Минимальная цена:</label>
+    <input type="number" id="price_min" name="price_min" value="0">
+
+    <label for="price_max">Максимальная цена:</label>
+    <input type="number" id="price_max" name="price_max" value="10000000">
+
+    <label for="article_min">Минимальный артикул:</label>
+    <input type="text" id="article_min" name="article_min" value="0">
+
+    <label for="article_max">Максимальный артикул:</label>
+    <input type="text" id="article_max" name="article_max" value="999999999">
+    <br>
+    <button type="submit" name="parse">Парсить</button>
+</form>
+</body>
+</html>
